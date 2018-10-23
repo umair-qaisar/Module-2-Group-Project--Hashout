@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2018-10-23 13:42:32
+  location_id: 1
+  topic: MyString
+  goals: MyString
+  capacity: 1
+
+two:
+  time: 2018-10-23 13:42:32
+  location_id: 1
+  topic: MyString
+  goals: MyString
+  capacity: 1
