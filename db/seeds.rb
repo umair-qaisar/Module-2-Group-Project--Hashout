@@ -22,8 +22,6 @@ Location.create(name: "Bar")
 Location.create(name: "Costa")
 Location.create(name: "Town")
 
-
-
 Function.create(topic: "learn", location_id:1)
 Function.create(topic: "dontlearn", location_id: 4)
 Function.create(topic: "havefun", location_id: 3)
