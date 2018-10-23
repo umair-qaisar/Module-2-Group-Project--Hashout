@@ -1,4 +1,5 @@
 class LanguagesController < ApplicationController
-  erql;wdsfhjvrnwfdslkvbeqr wfldksc
-  ewqlkjdsfhcerwfdskbvnewfas
+  def index
+  end
+
 end
