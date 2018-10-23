@@ -1,6 +1,5 @@
 
 
 <% @locations.each do |location| %>
-  <%= location.name  %>
-  <%= location.description %>
+  <%= link_to location.name, location_path(location)  %>
 <% end %>

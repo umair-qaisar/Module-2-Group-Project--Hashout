@@ -1,5 +1,4 @@
 
 <% @languages.each do |language| %>
-  <%= language.name  %>
-  <%= language.description %>
+  <%= link_to language.name, language_path(language)  %>
 <% end %>
