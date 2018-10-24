@@ -6,6 +6,4 @@ class Language < ApplicationRecord
     self.users.count
   end
 
-
-
 end

@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <%= link_to "Locations Index", locations_path %>
+    <%= link_to "Languages Index", languages_path %>
+    <%= link_to "Home", home_path %>
     <%= yield %>
 
     <% if session[:user_id] != nil %>

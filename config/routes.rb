@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :functions
     resources :locations
     resources :languages
-    resources :users, only: [:index, :show, :create, :edit, :update, :delete]
+    resources :users
 
     # users
     get '/register', to: 'users#new', as: 'register'
