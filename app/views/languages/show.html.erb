@@ -1,0 +1,10 @@
+<br>
+Language Name: <%= @language.name %>
+<br>
+Language Description: <%= @language.description %>
+<br>
+Language Creator: <%= @language.creator %>
+<br>
+<%= "Join #{pluralize(@language.number_of_users, 'user')}, studying this language!" %>
+<br>
+<%= link_to "Go Back", languages_path %>

@@ -1,0 +1,42 @@
+User Profile
+
+<%= form_for @user do |f| %>
+  <%= f.label :username, "Username: "%>
+  <%= f.text_field :username %>
+  <br>
+  <%= f.label :firstname, "First Name: " %>
+  <%= f.text_field :firstname %>
+  <br>
+  <%= f.label :lastname, "Last Name: "%>
+  <%= f.text_field :lastname %>
+  <br>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br>
+  <%= f.label :postcode %>
+  <%= f.text_field :postcode %>
+  <br>
+  <%= f.label :photo, "Display Picture(Please enter a valid URL)" %>
+  <%= f.text_field :photo %>
+  <br>
+  <%= f.label :experience, "How long have you been coding, and in what Languages?" %>
+  <%= f.text_area :experience %>
+  <br>
+  <%= f.label :bio, "Bio" %>
+  <%= f.text_area :bio %>
+<p>Social Media</p>
+  <br>
+  <%= f.label :facebook %>
+  <%= f.text_field :facebook %>
+  <br>
+  <%= f.label :twitter %>
+  <%= f.text_field :twitter %>
+  <br>
+  <%= f.label :github %>
+  <%= f.text_field :github %>
+  <br>
+  <%= f.label :website %>
+  <%= f.text_field :website %>
+  <br>
+  <%= f.submit %>
+<% end %>
