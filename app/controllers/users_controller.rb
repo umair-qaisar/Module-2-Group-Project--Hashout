@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       user = @user
       if user
         session[:user_id] = user.id
-        redirect_to user_path #user taken to profile page
+        redirect_to user_path(user) #user taken to profile page
       else
         redirect_to register_path #user not valid has to register
       end
@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    authorized_for(params[:id])
   end
 
   def edit
