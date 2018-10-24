@@ -6,19 +6,79 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= link_to "Locations Index", locations_path %>
-    <%= link_to "Languages Index", languages_path %>
-    <%= link_to "Home", home_path %>
-    <%= yield %>
 
-    <% if session[:user_id] != nil %>
-      <h1>HELLO, your user id is <%= session[:user_id] %> </h1>
-      <%= link_to "Log out", logout_path, method: "post" %>
-    <% end %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <%= link_to "HashOut", home_path, class:"navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item active">
+      
+        </li>
+        <li class="nav-item <%= request.path == locations_path ? "active" : "" %>">
+          <%= link_to "Locations", locations_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= request.path == languages_path ? "active" : "" %>">
+          <%= link_to "Languages", languages_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item <%= request.path == about_path ? "active" : "" %>">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <% if session[:user_id] != nil %>
+        <h1>HELLO, your user id is <%= session[:user_id] %> </h1>
+        <%= link_to "Edit Profile", edit_user_path(User.find(session[:user_id])) %>
+        <%= link_to "Log out", logout_path, method: "post" %>
+        <li class="ml-2 logged_in_img">
+          <%# <img src="= User.find(session[:user_id]).photo" alt="=User.find(session[:user_id]).username"> %>
+
+          <img src="https://avatars0.githubusercontent.com/u/10384309?s=400&u=f22b84e7c9e949e4a561c96c9b5961e859a5cd44&v=4" alt="">
+          <i class="fas fa-angle-down"></i>
+          <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+            <a class="dropdown-item" href="#">Dropdown link</a>
+            <a class="dropdown-item" href="#">Dropdown link</a>
+          </div>
+        </li>
+
+        <% else %>
+          <li class="nav-item">
+            <%= link_to register_path, class: "btn btn-primary" do %>
+              <span class="glyphicon glyphicon-user"></span>
+              Sign Up
+            <% end %>
+          </li>
+          <li class="nav-item ml-1">
+            <%= link_to login_path, class: "btn btn-primary" do  %>
+              <span class="glyphicon glyphicon-log-in"></span>
+              Log in
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+      <%# <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form> %>
+    </div>
+  </nav>
+
+    <div class="container">
+     <%= yield %>
+    </div>
+
+
+    <footer>
+
+    </footer>
   </body>
 </html>

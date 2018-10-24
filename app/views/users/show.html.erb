@@ -1,7 +1,9 @@
 <br>
 User Show Page
 <br>
-
+<% if flash[:authorized] %>
+  <p><%= flash[:authorized]%></p>
+<% end %>
 
 <br>
 
