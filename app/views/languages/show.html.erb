@@ -1,10 +1,17 @@
 <br>
-Language Name: <%= @language.name %>
+Language Name: <%= @language.name.capitalize %>
 <br>
-Language Description: <%= @language.description %>
+<%= "Join #{pluralize(@language.number_of_users, 'User')}, studying this language!.Head over to our functions page, to see how you can get involved." %>
+<br>
+<%=  "#{@language.name.capitalize} has had hashouts, in #{pluralize(@language.number_of_locations, 'location')}." %>
+<br>
+<br>
+Language Description:
+<br>
+<%= @language.description %>
+<br>
 <br>
 Language Creator: <%= @language.creator %>
 <br>
-<%= "Join #{pluralize(@language.number_of_users, 'user')}, studying this language!" %>
-<br>
+
 <%= link_to "Go Back", languages_path %>

@@ -8,4 +8,14 @@ class User < ApplicationRecord
 
   validates :username, uniqueness: true, presence: true
   has_secure_password
+
+
+  def last_function
+    self.function.last
+  end
+
+  def full_name
+    "#{firstname.capitalize} #{lastname.capitalize}"
+  end
+
 end
