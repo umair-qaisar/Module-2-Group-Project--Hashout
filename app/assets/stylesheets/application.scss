@@ -48,6 +48,27 @@
   left: -15px;
   position: absolute;
 }
+.panel-heading {
+  position: relative;
+}
+.panel {
+  padding-bottom: 20px;
+}
+.panel-heading a.collapsed:after {
+  content:"}";
+}
+.panel-collapse:after {
+  content: "}";
+  color: #2196F3;
+  font-size: 1.21875rem;
+}
+.panel-body {
+  padding-left: 30px;
+}
+
+.function_show {
+  
+}
 
 @media (max-width: 992px) {
   .dropdown-toggle::after {
