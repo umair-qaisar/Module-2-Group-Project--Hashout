@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    authorized_for(params[:id])
   end
 
   def update

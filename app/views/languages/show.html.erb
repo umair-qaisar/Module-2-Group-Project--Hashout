@@ -1,9 +1,11 @@
 <br>
 Language Name: <%= @language.name.capitalize %>
 <br>
-<%= "Join #{pluralize(@language.number_of_users, 'User')}, studying this language!.Head over to our functions page, to see how you can get involved." %>
 <br>
-<%=  "#{@language.name.capitalize} has had hashouts, in #{pluralize(@language.number_of_locations, 'location')}." %>
+<%= "Join #{pluralize(@language.number_of_users, 'User')}, studying this language!.Head over to our " %><%= link_to "functions", functions_path %><%= " page, to see how you can get involved." %>
+<br>
+<br>
+<%=  "#{@language.name.capitalize} has had " %><%= link_to "hashouts", locations_path %><%= " in #{pluralize(@language.number_of_locations, 'location')}." %>
 <br>
 <br>
 Language Description:
