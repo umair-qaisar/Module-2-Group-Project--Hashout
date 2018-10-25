@@ -15,10 +15,10 @@ Bio: <%= @user.bio %>
 
 <p>Social media</p>
 
-<a href="<%= @user.facebook %>">Facebook</a>
-<a href="<%= @user.twitter %>">Twitter</a>
-<a href="<%= @user.github %>"> Github</a>
-<a href"<%= @user.website %>">Website</a>
+<a href="<%= @user.facebook %>" target="_blank">Facebook</a>
+<a href="<%= @user.twitter %>" target="_blank">Twitter</a>
+<a href="<%= @user.github %>" target="_blank"> Github</a>
+<a href"<%= @user.website %>" target="_blank">Website</a>
 
 <br>
 <%=  "Member Since #{@user.created_at.month}/#{@user.created_at.year}" %>
