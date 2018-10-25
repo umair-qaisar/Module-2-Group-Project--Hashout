@@ -1,7 +1,9 @@
 <br>
 User Show Page
 <br>
-
+<% if flash[:authorized] %>
+  <p><%= flash[:authorized]%></p>
+<% end %>
 
 
 <img src="<%= @user.photo %>" alt="user_image">
@@ -15,10 +17,13 @@ Bio: <%= @user.bio %>
 
 <p>Social media</p>
 
-<a href="<%= @user.facebook %>" target="_blank">Facebook</a>
-<a href="<%= @user.twitter %>" target="_blank">Twitter</a>
-<a href="<%= @user.github %>" target="_blank"> Github</a>
-<a href"<%= @user.website %>" target="_blank">Website</a>
+Facebook: <a href="<%= @user.facebook_url %>" target="_blank"><%= "#{@user.facebook}" %></a>
+<br>
+Twitter: <a href="<%= @user.twitter_url%>" target="_blank"><%= "#{@user.twitter}" %></a>
+<br>
+Github: <a href="<%= @user.github_url %>" target="_blank"><%= "#{@user.github}" %> </a>
+<br>
+<a href"<%= @user.website %>" target="_blank">Website(please enter full url https://...): </a>
 
 <br>
 <%=  "Member Since #{@user.created_at.month}/#{@user.created_at.year}" %>

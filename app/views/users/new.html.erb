@@ -2,8 +2,8 @@ Sign Up
 
 <%= form_for @user do |f| %>
   <%= f.label :username %>
-  <%= f.text_field :username %>
+  <%= f.text_field :username, class: 'form-control' %>
   <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.password_field :password, class: 'form-control' %>
   <%= f.submit %>
 <% end %>

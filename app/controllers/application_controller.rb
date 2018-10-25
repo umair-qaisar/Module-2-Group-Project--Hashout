@@ -22,10 +22,10 @@ def authorized?
 end
 
 def authorized_for(user_id)
-    if current_user.id != user_id.to_i
+  if current_user.id != user_id.to_i
     flash[:authorized] = "You cannot view a page that's not yours."
     redirect_to current_user
-    end
+  end
 end
 
 end
