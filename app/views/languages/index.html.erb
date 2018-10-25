@@ -5,3 +5,21 @@
   <br>
   <hr>
 <% end %>
+
+<table class="table">
+  <tbody>
+      <thead> HELLO </thead>
+      <th scope="col">LANGUAGE</th>
+      <th scope="col">TOTAL HASHOUT MEMBERS</th>
+      <th scope="col">TOTAL HASHOUT LOCATIONS</th>
+
+    <% @languages.each do |language| %>
+    <tr>
+      <td><img class="thumbnail img-responsive" src="https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-1/16196015_10154888128487744_6901111466535510271_n.png?_nc_cat=103&_nc_ht=scontent-lhr3-1.xx&oh=feb49fc01590175a382e49670cf814dc&oe=5C55A559" alt=""></td>
+      <td><%= link_to language.name.upcase, language_path(language)  %></td>
+      <td class="text-center"><%= link_to language.number_of_users  %></td>
+      <td><%= link_to language.number_of_locations %></td>
+    </tr>
+    <%end%>
+  </tbody>
+</table>
