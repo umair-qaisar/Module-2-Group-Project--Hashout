@@ -34,10 +34,15 @@ User.create(username: "Pat", password:"word" )
 User.create(username: "Olly", password:"word" )
 User.create(username: "John", password:"word" )
 
-Location.create(name: "Park")
-Location.create(name: "Bar")
-Location.create(name: "Costa")
-Location.create(name: "Town")
+Location.create(name: "The British Library", postcode: "NW1 2DB", address: "96 Euston Road, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=1770007535949962021", type:"Library", opening_hours:"Mon - Fri: 9:30 am - 8:00 pm", description:"Home to 150 million items, including the Magna Carta, the British Library is the world’s second greatest book collection, and a must for bookworms and history buffs. Only a short walk from King’s Cross, the library is free to enter and a Reader Pass is available for students and members of the public over the age of 18, via online pre-registration (you will need to demonstrate your need to use the library when applying). The tightly controlled reading rooms (water bottles and bags must be dropped off in the cloakroom and pencils are the only writing equipment permitted) are great for quiet study with an inspiring backdrop.")
+
+Location.create(name: "The BFI Reuben Library", postcode: "SE1 8XT", address: "Belvedere Road, Lambeth, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=16424988554026959751", type:"Library", opening_hours:"Mon - Fri: 10:30 am - 7:00 pm", description:"The British Film Institute is a favourite on the South Bank cultural scene with its film festivals and stylish cinema on the doorstep of the Thames. Its Reuben Library is free to the public and you simply need to fill in a registration card upon each visit to access the study spaces. When you get tired of work, enjoy the vast collection of resources about the film and television world here, from books and journals to digitised material from the National Archives.")
+
+Location.create(name: "Ozone Coffee Roasters", postcode: "EC2 4AQ", address: "11 Leonard Street, Shoreditch, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=14283034858882690770", type:"Cafe", opening_hours:"Mon - Fri: 7:00 am - 10:00 pm", description:"Fashionable coffeehouses are in abundance in Shoreditch, but Ozone Coffee Roasters stands out among the rest with good reason. Not only is the coffee delicious, its beautiful light-filled shop has a chic industrial feel and is decked out with plenty of spacious wood countertops, booths and benches for spreading out stacks of books and laptops. Our favourite seats are around its open kitchen and those in the downstairs roasting area.")
+
+Location.create(name: "TY Seven Dials (Timberyard)", postcode: "WC2H 9DL", address: "7 Upper St Martin's Lane, London, United Kingdom", free_wifi:"Yes", map_link:"https://www.google.com/maps?cid=4607175792713443718", type:"Cafe", opening_hours:"Mon - Fri: 8:00 am - 6:00 pm", description:"‘Tea, coffee, work and play. Reimagined’ is the slogan for Timberyard, meaning workers are welcomed with a smile at this quirky coffeehouse. With two venues to choose from, the study cafés are renowned for their work-conducive environment and are usually full of young trendies typing busily away at their laptops into the evening, with a weekday 8pm closing time. Arrive early for the best seats and enjoy their buttered toast with jam; as far as simple breakfasts go, it’s hard to beat.")
+
+Location.create(name: "Victoria and Albert - National Art Library", postcode: "SW7 2RL", address: "Cromwell Road, Knightsbridge, London, United Kingdom", free_wifi:"Yes", map_link: "https://www.google.com/maps?cid=11397767969669218160", type:"Museum", opening_hours:"10:00 am - 5:45 pm", description:"The Victoria and Albert Museum (V&A) is a world-renowned destination for art and design that is home to over 2.3 million objects chronicling more than 5,000 years of human growth and creativity. In the museum there is a public reference library with free WiFi and over 1 million items from the library’s collection to browse. To access the library you can register on the Victoria and Albert Museum’s website.")
 
 Function.create(topic: "learn", location_id:1)
 Function.create(topic: "dontlearn", location_id: 4)
@@ -66,3 +71,5 @@ UserFunction.create(user_id: 1, function_id: 4)
 UserFunction.create(user_id: 2, function_id: 2)
 UserFunction.create(user_id: 3, function_id: 3)
 UserFunction.create(user_id: 4, function_id: 1)
+
+end
